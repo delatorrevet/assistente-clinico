@@ -252,25 +252,14 @@ ASSIN_AT = r"""
 <div class="ac">Assinatura e carimbo:<div class="esp"></div><b>{{ e.nome_assinatura }} - {{ e.titulo }}</b><br>CRMV {{ e.crmv }} · Registro no MAPA {{ e.mapa }}</div></div>
 </body></html>"""
 
-BLOCO_PACIENTE = r"""
-<style>.texto-doc{font-size:8.6pt;padding:7pt 10pt;line-height:1.45;white-space:normal}.assin-at{margin-top:10pt}</style>
-<div class="sec"><span class="n">1</span><span class="t">Paciente</span></div>
-<div class="linha"><div class="cel"><span class="r">Animal</span><span class="v">{{ p.nome }}</span></div><div class="cel"><span class="r">Espécie</span><span class="v">{{ p.especie }}</span></div><div class="cel"><span class="r">Raça</span><span class="v">{{ p.raca }}</span></div><div class="cel"><span class="r">Idade</span><span class="v">{{ p.idade }}</span></div></div>
-<div class="linha"><div class="cel"><span class="r">Sexo</span><span class="v">{{ p.sexo }}</span></div><div class="cel"><span class="r">Peso</span><span class="v">{{ p.peso }}</span></div><div class="cel" style="flex:1.6"><span class="r">Microchip</span><span class="v">{{ p.microchip }}</span></div></div>
-
-<div class="sec"><span class="n">2</span><span class="t">Responsável</span></div>
-<div class="linha"><div class="cel" style="flex:2"><span class="r">Nome</span><span class="v">{{ r.nome }}</span></div><div class="cel"><span class="r">CPF</span><span class="v">{{ r.cpf }}</span></div></div>
-<div class="linha"><div class="cel"><span class="r">Endereço</span><span class="v">{{ r.endereco }}</span></div></div>
-"""
-
-ENCAMINHAMENTO = BLOCO_PACIENTE + r"""
-<div class="sec"><span class="n">3</span><span class="t">Encaminhamento</span></div>
+ENCAMINHAMENTO = r"""
+<style>.texto-doc{font-size:8.6pt;padding:7pt 10pt;line-height:1.45}.assin-at{margin-top:10pt}</style>
 <div class="linha"><div class="cel" style="flex:2"><span class="r">Destinatário</span><span class="v">{{ enc.destinatario }}</span></div><div class="cel"><span class="r">Especialidade</span><span class="v">{{ enc.especialidade }}</span></div></div>
 <div class="texto-fixo texto-doc">{{ f(enc.texto) }}</div>
 """ + ASSIN_AT
 
-RELATORIO = BLOCO_PACIENTE + r"""
-<div class="sec"><span class="n">3</span><span class="t">Relatório clínico</span></div>
+RELATORIO = r"""
+<style>.texto-doc{font-size:8.6pt;padding:7pt 10pt;line-height:1.45}.assin-at{margin-top:10pt}</style>
 <div class="texto-fixo texto-doc">{{ f(rel.texto) }}</div>
 """ + ASSIN_AT
 
@@ -357,12 +346,18 @@ def main():
         corpo = env.from_string(ATESTADO).render(at=at, t=at["tutor"], an=at.get("animal", {}), v=at["vacina"], **ctx)
         docs.append(("atestado", "Atestado de Saúde para<br>Viagens de Cães e Gatos", "sem_rodape", corpo))
     if "encaminhamento" in a:
-        corpo = env.from_string(ENCAMINHAMENTO).render(enc=a["encaminhamento"], **ctx)
-        docs.append(("encaminhamento", "Encaminhamento<br>Clínico", "sem_rodape", corpo))
+        corpo = env.from_string(IDENT_LINHA).render(completo=True, emitente=False, **ctx) + env.from_string(ENCAMINHAMENTO).render(enc=a["encaminhamento"], **ctx)
+        docs.append(("encaminhamento", "Encaminhamento clínico", "assin", corpo))
     if "relatorio" in a:
-        corpo = env.from_string(RELATORIO).render(rel=a["relatorio"], **ctx)
-        docs.append(("relatorio", "Relatório<br>Clínico", "sem_rodape", corpo))
+        corpo = env.from_string(IDENT_LINHA).render(completo=True, emitente=False, **ctx) + env.from_string(RELATORIO).render(rel=a["relatorio"], **ctx)
+        docs.append(("relatorio", "Relatório clínico", "assin", corpo))
     for nome, titulo, vias, corpo in docs:
+        if vias == "assin":
+            page = env.from_string(CAB).render(titulo=titulo, vias=False, atestado=False, **ctx) + corpo
+            destino = out / f"{a.get('codigo', 'atendimento')}_{nome}.pdf"
+            HTML(string=page, base_url=str(AQUI)).write_pdf(destino)
+            print(destino)
+            continue
         if vias == "sem_rodape":
             page = env.from_string(CAB).render(titulo=titulo, vias=False, atestado=True, **ctx) + corpo
             destino = out / f"{a.get('codigo', 'atendimento')}_{nome}.pdf"

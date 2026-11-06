@@ -245,7 +245,7 @@ Cabeçalho de todos os documentos: fundo branco, logo nas cores originais, divis
 
 ## Encaminhamento e relatório
 
-Seguem o visual do atestado: cabeçalho com o título do documento, dados do paciente e do responsável em cima, assinatura embaixo. Não têm rodapé de página.
+Seguem o cabeçalho e o bloco de dados da receita (paciente e responsável em caixa), com a assinatura embaixo no padrão do atestado.
 
 No JSON do atendimento:
 
