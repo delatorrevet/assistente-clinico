@@ -254,7 +254,7 @@ ASSIN_AT = r"""
 
 ENCAMINHAMENTO = r"""
 <style>.texto-doc{font-size:8.6pt;padding:7pt 10pt;line-height:1.45}.assin-at{margin-top:10pt}</style>
-<div class="linha"><div class="cel" style="flex:2"><span class="r">Destinatário</span><span class="v">{{ enc.destinatario }}</span></div><div class="cel"><span class="r">Especialidade</span><span class="v">{{ enc.especialidade }}</span></div></div>
+<div class="linha"><div class="cel"><span class="r">Especialidade</span><span class="v">{{ enc.especialidade }}</span></div></div>
 <div class="texto-fixo texto-doc">{{ f(enc.texto) }}</div>
 """ + ASSIN_AT
 

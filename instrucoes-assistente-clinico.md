@@ -249,7 +249,7 @@ Seguem o cabeçalho e o bloco de dados da receita (paciente e responsável em ca
 
 No JSON do atendimento:
 
-- `encaminhamento`: `destinatario`, `especialidade` e `texto`.
+- `encaminhamento`: `especialidade` e `texto`. O nome do profissional de destino não aparece no documento; só a especialidade.
 - `relatorio`: `texto`.
 
 Regras:
