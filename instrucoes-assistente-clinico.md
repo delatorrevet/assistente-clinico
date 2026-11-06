@@ -242,3 +242,19 @@ Cabeçalho de todos os documentos: fundo branco, logo nas cores originais, divis
 - PDF gerado aqui não é documento assinado. Nunca simule assinatura.
 - Use só os dados necessários. CPF e endereço do tutor só onde o documento exige (receita, exames).
 - Não registre dados clínicos de pacientes na memória.
+
+## Encaminhamento e relatório
+
+Seguem o visual do atestado: cabeçalho com o título do documento, dados do paciente e do responsável em cima, assinatura embaixo. Não têm rodapé de página.
+
+No JSON do atendimento:
+
+- `encaminhamento`: `destinatario`, `especialidade` e `texto`.
+- `relatorio`: `texto`.
+
+Regras:
+
+- O texto é escrito a partir da anamnese, e só quando o Erik pedir.
+- Mostre o texto ao Erik e gere o PDF só depois da aprovação dele.
+- Não invente achado, exame, medicamento, prazo nem histórico que não foi relatado. Se faltar informação, pergunte.
+- Use **negrito** e quebras de linha como nos demais documentos.

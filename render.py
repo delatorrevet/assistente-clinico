@@ -88,7 +88,7 @@ CAB = r"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><link re
   <img class="logo" src="logo-vertical.png">
   <div class="div"></div>
   <div class="contato">{{ ico_tel }}{{ e.telefone }}<br>{{ ico_mail }}{{ e.email }}<br>{{ ico_pin }}São Paulo/SP</div>
-  <div class="doc">{{ ico_doc }}<div class="t">Atestado de Saúde para<br>Viagens de Cães e Gatos</div></div>
+  <div class="doc">{{ ico_doc }}<div class="t">{{ titulo|safe }}</div></div>
 </div>
 {% else %}
 <div class="cab">
@@ -247,6 +247,33 @@ GUIA = r"""
 {% endfor %}
 """
 
+ASSIN_AT = r"""
+<div class="assin-at"><div><b>São Paulo, {{ data }}</b></div>
+<div class="ac">Assinatura e carimbo:<div class="esp"></div><b>{{ e.nome_assinatura }} - {{ e.titulo }}</b><br>CRMV {{ e.crmv }} · Registro no MAPA {{ e.mapa }}</div></div>
+</body></html>"""
+
+BLOCO_PACIENTE = r"""
+<style>.texto-doc{font-size:8.6pt;padding:7pt 10pt;line-height:1.45;white-space:normal}.assin-at{margin-top:10pt}</style>
+<div class="sec"><span class="n">1</span><span class="t">Paciente</span></div>
+<div class="linha"><div class="cel"><span class="r">Animal</span><span class="v">{{ p.nome }}</span></div><div class="cel"><span class="r">Espécie</span><span class="v">{{ p.especie }}</span></div><div class="cel"><span class="r">Raça</span><span class="v">{{ p.raca }}</span></div><div class="cel"><span class="r">Idade</span><span class="v">{{ p.idade }}</span></div></div>
+<div class="linha"><div class="cel"><span class="r">Sexo</span><span class="v">{{ p.sexo }}</span></div><div class="cel"><span class="r">Peso</span><span class="v">{{ p.peso }}</span></div><div class="cel" style="flex:1.6"><span class="r">Microchip</span><span class="v">{{ p.microchip }}</span></div></div>
+
+<div class="sec"><span class="n">2</span><span class="t">Responsável</span></div>
+<div class="linha"><div class="cel" style="flex:2"><span class="r">Nome</span><span class="v">{{ r.nome }}</span></div><div class="cel"><span class="r">CPF</span><span class="v">{{ r.cpf }}</span></div></div>
+<div class="linha"><div class="cel"><span class="r">Endereço</span><span class="v">{{ r.endereco }}</span></div></div>
+"""
+
+ENCAMINHAMENTO = BLOCO_PACIENTE + r"""
+<div class="sec"><span class="n">3</span><span class="t">Encaminhamento</span></div>
+<div class="linha"><div class="cel" style="flex:2"><span class="r">Destinatário</span><span class="v">{{ enc.destinatario }}</span></div><div class="cel"><span class="r">Especialidade</span><span class="v">{{ enc.especialidade }}</span></div></div>
+<div class="texto-fixo texto-doc">{{ f(enc.texto) }}</div>
+""" + ASSIN_AT
+
+RELATORIO = BLOCO_PACIENTE + r"""
+<div class="sec"><span class="n">3</span><span class="t">Relatório clínico</span></div>
+<div class="texto-fixo texto-doc">{{ f(rel.texto) }}</div>
+""" + ASSIN_AT
+
 
 def preparar_receita(a, catalogo, conferencia):
     rx = a["receita"]
@@ -328,7 +355,13 @@ def main():
     if "atestado" in a:
         at = a["atestado"]
         corpo = env.from_string(ATESTADO).render(at=at, t=at["tutor"], an=at.get("animal", {}), v=at["vacina"], **ctx)
-        docs.append(("atestado", "Atestado de saúde para viagem", "sem_rodape", corpo))
+        docs.append(("atestado", "Atestado de Saúde para<br>Viagens de Cães e Gatos", "sem_rodape", corpo))
+    if "encaminhamento" in a:
+        corpo = env.from_string(ENCAMINHAMENTO).render(enc=a["encaminhamento"], **ctx)
+        docs.append(("encaminhamento", "Encaminhamento<br>Clínico", "sem_rodape", corpo))
+    if "relatorio" in a:
+        corpo = env.from_string(RELATORIO).render(rel=a["relatorio"], **ctx)
+        docs.append(("relatorio", "Relatório<br>Clínico", "sem_rodape", corpo))
     for nome, titulo, vias, corpo in docs:
         if vias == "sem_rodape":
             page = env.from_string(CAB).render(titulo=titulo, vias=False, atestado=True, **ctx) + corpo
