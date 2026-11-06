@@ -1,0 +1,43 @@
+{
+  "_como_usar": "Um item por produto que o Erik prescreve com frequência. Campos null = ainda não informados pelo Erik; o agente pergunta antes de usar. dose_padrao só é preenchida pelo Erik.",
+  "gaviz-v-5": {
+    "nome": "Gaviz V 5 mg", "apresentacao": "comprimido, caixa com 10", "farmacia": "veterinária",
+    "forma": "comprimido", "mg_por_unidade": 5, "fracao_minima": null, "unidades_por_embalagem": 10,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "up-flora": {
+    "nome": "UP Flora", "apresentacao": "cápsula, frasco com 30", "farmacia": "veterinária",
+    "forma": "capsula", "mg_por_unidade": null, "fracao_minima": 1, "unidades_por_embalagem": 30,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "cerenia-16": {
+    "nome": "Cerenia 16 mg", "apresentacao": "comprimido, caixa com 4", "farmacia": "veterinária",
+    "forma": "comprimido", "mg_por_unidade": 16, "fracao_minima": 0.5, "unidades_por_embalagem": 4,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "vitecol": {
+    "nome": "Vitecol", "apresentacao": "comprimido, caixa com 30", "farmacia": "veterinária",
+    "forma": "comprimido", "mg_por_unidade": null, "fracao_minima": 0.25, "unidades_por_embalagem": 30,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "ograx-gatos": {
+    "nome": "Ograx Gatos", "apresentacao": "30 cápsulas gelatinosas palatáveis, twist-off", "farmacia": "veterinária",
+    "forma": "capsula", "mg_por_unidade": null, "fracao_minima": 1, "unidades_por_embalagem": 30,
+    "controlado": false, "especie": "felino", "foto": null, "dose_padrao": null
+  },
+  "atlantis-omega-3": {
+    "nome": "Atlantis Ômega 3", "apresentacao": "frasco de 300 mL", "farmacia": "veterinária",
+    "forma": "liquido", "mg_por_ml": null, "ml_por_embalagem": 300,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "folib": {
+    "nome": "FoliB", "apresentacao": "líquido palatável, 30 mL", "farmacia": "veterinária",
+    "forma": "liquido", "mg_por_ml": null, "ml_por_embalagem": 30,
+    "controlado": false, "foto": null, "dose_padrao": null
+  },
+  "desduo-100": {
+    "nome": "Desduo 100 mg", "apresentacao": "30 comprimidos", "farmacia": "humana",
+    "forma": "comprimido", "mg_por_unidade": 100, "fracao_minima": null, "unidades_por_embalagem": 30,
+    "controlado": true, "foto": null, "dose_padrao": null
+  }
+}

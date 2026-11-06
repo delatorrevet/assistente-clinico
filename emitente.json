@@ -1,0 +1,26 @@
+{
+  "nome": "Dr. Erik Oliveira Dellatorre",
+  "nome_assinatura": "Erik Oliveira Dellatorre",
+  "titulo": "Médico Veterinário",
+  "crmv": "62189/SP",
+  "mapa": "MV00547082023",
+  "telefone": "(11) 96115-0392",
+  "email": "delatorrevet@gmail.com",
+  "cnpj": "52.621.693/0001-33",
+  "contatos": {
+    "petz": {
+      "titulo": "Desconto na Petz",
+      "texto": "Use o cupom no site ou app da Petz.",
+      "cupom": "entremiauspet"
+    },
+    "provet": {
+      "titulo": "Coleta de exames em casa",
+      "texto": "Provet Medicina Veterinária Diagnóstica\n**+55 11 4210-7200**",
+      "logo": "provet.png"
+    },
+    "manipulacao": {
+      "titulo": "Manipulados",
+      "texto": "Farmácia de manipulação da Petlove\n**+55 12 3346-0333**"
+    }
+  }
+}

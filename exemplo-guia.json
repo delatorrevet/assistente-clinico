@@ -1,0 +1,97 @@
+{
+  "codigo": "20261104-BENTO-MCS",
+  "data": "2026-11-04",
+  "paciente": {
+    "nome": "Bento",
+    "especie": "Canino",
+    "raca": "Shih Tzu",
+    "sexo": "Macho",
+    "idade": "5 meses",
+    "peso": "3,2 kg",
+    "peso_kg": 3.2
+  },
+  "responsavel": {
+    "nome": "Marina Costa Silva",
+    "cpf": "000.000.000-00",
+    "endereco": "Rua Exemplo, 300, ap. 10, Vila Buarque, São Paulo, CEP 01224-000"
+  },
+  "guia": {
+    "titulo_doc": "Guia alimentar · dieta de eliminação",
+    "destaque": "Investigação de alergia alimentar",
+    "para": "para o Bento",
+    "energia": {
+      "fator": 2,
+      "refeicoes": 3,
+      "rotulo_der": "DER (diário · filhote)",
+      "texto": "Cálculo baseado no peso atual do Bento (3,2 kg) e no fator de crescimento para filhotes entre 4 meses e a fase adulta (2x o gasto energético em repouso), ainda bem acima da necessidade de um cão adulto, já que ele continua em desenvolvimento durante as 8 semanas de teste."
+    },
+    "racoes": {
+      "titulo": "Opções de ração para a dieta de eliminação",
+      "pct_seca_mix": 0.9,
+      "texto": "Durante as 8 semanas, o Bento vai comer **apenas uma** das duas rações hidrolisadas abaixo. Escolha a que ele melhor aceitar. Como ele tem seletividade alimentar, dentro da ração escolhida você pode variar entre seca pura, mix (seca + úmida na mesma tigela) ou úmida pura: todas as opções foram calculadas para a mesma meta calórica diária.",
+      "marcas": [
+        {
+          "seca": "rc-hypoallergenic-small-dog",
+          "umida": "rc-hypoallergenic-canine-pate"
+        },
+        {
+          "seca": "hills-zd-small-bites",
+          "umida": "hills-zd-lata"
+        }
+      ],
+      "notas": [
+        {
+          "tipo": "nota",
+          "texto": "**Como fazer a troca:** misture a ração nova com a atual ao longo de 5 a 7 dias, aumentando gradualmente a proporção da nova. A partir do 7º dia, oferecer somente a ração nova, seja ela Royal Canin ou Hill's, no formato (seca, mix ou úmida) que o Bento aceitar melhor."
+        },
+        {
+          "tipo": "alerta",
+          "texto": "**Atenção:** as duas rações são formuladas para manutenção de cães adultos. Como o Bento ainda está em fase de crescimento, o acompanhamento quinzenal de peso durante as 8 semanas é essencial para reajustar as porções e acompanhar o desenvolvimento. Vou pedir esse retorno de peso durante o período."
+        }
+      ]
+    },
+    "secoes": [
+      {
+        "titulo": "O que fica proibido durante todo o período",
+        "colunas": 2,
+        "texto": "O objetivo é descobrir se a alergia vem da comida. Pra isso, o Bento vai comer somente a ração escolhida durante **8 semanas**. Parece simples, mas é aí que a maioria dos testes dá errado: basta um petisco ou um pedaço de comida no meio do caminho pro resultado ficar comprometido e a gente ter que recomeçar.",
+        "itens": [
+          "Petiscos, biscoitos, ossinhos, bifinhos e qualquer coisa de mastigar (couro, palitos, orelha etc.)",
+          "Comida de gente, mesmo \"só um pedacinho\"",
+          "Ração de outros animais da casa",
+          "Frutas e legumes",
+          "Suplementos, vitaminas e pastas",
+          "Remédios e antipulgas mastigáveis com sabor. Antes de dar qualquer medicação, fale comigo",
+          "Pasta de dente com sabor",
+          "Esconder comprimido em comida. Se precisar, me pergunte qual alternativa usar"
+        ],
+        "nota": {
+          "tipo": "nota",
+          "texto": "**Petisco liberado:** os próprios grãos da ração nova podem ser usados como recompensa. Se quiser algo diferente, me pergunte antes."
+        }
+      },
+      {
+        "titulo": "Cuidados na rotina",
+        "itens": [
+          "Se tem outros animais em casa, alimente o Bento separado e recolha os potes depois.",
+          "Atenção com crianças e visitas oferecendo comida. Vale avisar todo mundo da casa.",
+          "Cuidado com lixo, restos no chão e coisas encontradas no passeio.",
+          "Se o Bento for passar uns dias fora (casa de parente, hotelzinho), mande a ração junto e explique as regras.",
+          "Água fresca à vontade."
+        ]
+      },
+      {
+        "titulo": "Diário de acompanhamento",
+        "texto": "Anote uma vez por semana como está a coceira do Bento (de 0 a 10) e qualquer escorregada, mesmo pequena. Se ele comer algo fora da dieta, não precisa esconder, só me avise. A gente avalia juntos se precisa estender o prazo."
+      },
+      {
+        "titulo": "Depois das 8 semanas",
+        "texto": "Se houver melhora, a gente faz o **teste de provocação**: volta a comida antiga por um período curto e observa. Se os sintomas voltarem, confirma que o problema é alimentar. Essa parte é importante, não pule por conta própria.",
+        "nota": {
+          "tipo": "alerta",
+          "texto": "Qualquer dúvida no meio do caminho, me chama antes de oferecer algo novo ao Bento."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_como_usar": "Alimentos que o Erik prescreve. kcal_kg vem do rótulo/fabricante e é conferido pelo Erik. Fotos em catalogo/fotos.",
+  "rc-hypoallergenic-small-dog": {"marca": "royal-canin", "nome": "Hypoallergenic Small Dog", "formato": "seca", "kcal_kg": 3868, "embalagens": "2 kg e 7,5 kg", "foto": "rc-hypoallergenic-small-dog-seca.png", "especie": "canino"},
+  "rc-hypoallergenic-canine-pate": {"marca": "royal-canin", "nome": "Hypoallergenic Canine Patê", "formato": "úmida", "kcal_kg": 967, "embalagens": "200 g e 400 g", "foto": "rc-hypoallergenic-canine-pate.png", "especie": "canino"},
+  "hills-zd-small-bites": {"marca": "hills", "nome": "z/d Small Bites", "formato": "seca", "kcal_kg": 3556, "embalagens": "3,1 kg", "foto": "hills-zd-small-bites.png", "especie": "canino"},
+  "hills-zd-lata": {"marca": "hills", "nome": "z/d lata", "formato": "úmida", "kcal_kg": 951, "embalagens": "lata de 370 g (352 kcal)", "g_por_unidade": 370, "unidade": "lata", "foto": "hills-zd-lata.png", "especie": "canino"},
+  "_marcas": {
+    "royal-canin": {"nome": "Royal Canin", "logo": "marca-royal-canin.png"},
+    "hills": {"nome": "Hill's", "logo": "marca-hills.png"}
+  }
+}

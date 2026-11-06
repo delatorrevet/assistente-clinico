@@ -1,0 +1,50 @@
+{
+  "codigo": "20261106-BOLT-RMS",
+  "data": "2026-11-06",
+  "paciente": {
+    "nome": "Bolt",
+    "especie": "Canino",
+    "raca": "Spitz alemão",
+    "sexo": "Macho",
+    "idade": "10 meses",
+    "microchip": "000000000000000"
+  },
+  "responsavel": {
+    "nome": "Rafael Mendes Souza"
+  },
+  "atestado": {
+    "tutor": {
+      "nome": "Rafael Mendes Souza",
+      "documento": "000.000.000-00",
+      "telefone": "(11) 90000-0000",
+      "endereco": "Rua Exemplo, 200, ap. 31",
+      "cidade_uf": "São Paulo/SP"
+    },
+    "animal": {
+      "pelagem": "Laranja",
+      "nascimento": "10/01/2026",
+      "porte": "Pequeno",
+      "aplicacao_microchip": "20/05/2026"
+    },
+    "vacina": {
+      "laboratorio": "MSD Saúde Animal",
+      "nome_comercial": "Nobivac Raiva",
+      "aplicacao": "01/06/2026",
+      "validade": "junho/2027",
+      "lote": "000/00"
+    },
+    "antiparasitario_interno": {
+      "aplicacao": "28/10/2026",
+      "laboratorio": "Elanco",
+      "nome_comercial": "Drontal Plus",
+      "principios": "Praziquantel, pamoato de pirantel, febantel"
+    },
+    "antiparasitario_externo": {
+      "aplicacao": "28/10/2026",
+      "laboratorio": "Zoetis",
+      "nome_comercial": "Revolution",
+      "principios": "Selamectina"
+    },
+    "adicionais": ""
+  }
+}

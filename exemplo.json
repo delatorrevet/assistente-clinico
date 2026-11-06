@@ -1,0 +1,160 @@
+{
+  "codigo": "20261106-MEL-ACS",
+  "data": "2026-11-06",
+  "paciente": {
+    "nome": "Mel",
+    "especie": "Felino",
+    "raca": "SRD",
+    "sexo": "Fêmea",
+    "idade": "9 anos",
+    "peso": "4,2 kg",
+    "peso_kg": 4.2
+  },
+  "responsavel": {
+    "nome": "Ana Costa Silva",
+    "cpf": "000.000.000-00",
+    "endereco": "Rua Exemplo, 100, ap. 12, Mooca, São Paulo, CEP 03100-000"
+  },
+  "receita": {
+    "grupos": [
+      {
+        "via": "Uso oral",
+        "itens": [
+          {
+            "produto": "gaviz-v-5",
+            "quantidade": "1 caixa",
+            "posologia": "Dar **1 comprimido** a cada **12 horas** por **14 dias**.",
+            "chips": [
+              "2x ao dia",
+              "14 dias"
+            ]
+          },
+          {
+            "produto": "up-flora",
+            "quantidade": "1 frasco",
+            "posologia": "Dar **1 cápsula** a cada **24 horas** por **30 dias**.",
+            "chips": [
+              "1x ao dia",
+              "30 dias"
+            ]
+          },
+          {
+            "produto": "cerenia-16",
+            "quantidade": "1 caixa",
+            "calculo": {
+              "dose_mg_kg": 1,
+              "freq_h": 24,
+              "se_necessario": true
+            },
+            "alertas": [
+              "só se precisar"
+            ]
+          },
+          {
+            "nome": "Item de farmácia humana (exemplo)",
+            "apresentacao": "[[apresentação]]",
+            "farmacia": "humana",
+            "quantidade": "1 caixa",
+            "posologia": "[[posologia]]"
+          }
+        ]
+      }
+    ],
+    "instrucoes": [
+      "Trocar a alimentação por ração hipoalergênica com proteína hidrolisada (Royal Canin Veterinary Diet Hypoallergenic para gatos ou Hill's z/d).",
+      "Fracionar a comida em pequenas porções, 4 refeições ao dia."
+    ]
+  },
+  "exames": {
+    "itens": [
+      {
+        "nome": "Dosagem de cobalamina (B12)",
+        "material": "sangue",
+        "preparo": "Jejum alimentar de 12 horas. Água à vontade."
+      },
+      {
+        "nome": "T4 total",
+        "material": "sangue",
+        "preparo": "Jejum alimentar de 12 horas. Água à vontade."
+      },
+      {
+        "nome": "fPLI",
+        "material": "sangue",
+        "preparo": "Jejum alimentar de 12 horas. Água à vontade."
+      },
+      {
+        "nome": "SDMA",
+        "material": "sangue",
+        "preparo": "Jejum alimentar de 12 horas. Água à vontade."
+      },
+      {
+        "nome": "FIV / FeLV (Elisa, snap)",
+        "material": "sangue",
+        "preparo": "Sem preparo."
+      },
+      {
+        "nome": "Urina tipo I",
+        "material": "urina, por cistocentese guiada por ultrassom",
+        "preparo": "Retirar a caixa de areia 3 horas antes da coleta."
+      },
+      {
+        "nome": "Relação proteína/creatinina urinária",
+        "material": "urina, por cistocentese guiada por ultrassom",
+        "preparo": "Retirar a caixa de areia 3 horas antes da coleta."
+      }
+    ],
+    "motivo": [
+      "Linfoma alimentar",
+      "DII"
+    ]
+  },
+  "orientacoes": {
+    "saudacao": "Para a Mel",
+    "intro": "Resumo do que combinamos na consulta.",
+    "horarios": [
+      {
+        "med": "Gaviz V 5 mg",
+        "dose": "1 comprimido",
+        "quando": "a cada 12 horas (2 vezes ao dia)",
+        "duracao": "14 dias"
+      },
+      {
+        "med": "UP Flora",
+        "dose": "1 cápsula",
+        "quando": "a cada 24 horas (1 vez ao dia)",
+        "duracao": "30 dias"
+      },
+      {
+        "med": "Cerenia 16 mg",
+        "dose": "½ comprimido",
+        "quando": "**só se ela vomitar**, no máximo 1 vez a cada 24 horas",
+        "duracao": "se necessário"
+      }
+    ],
+    "secoes": [
+      {
+        "titulo": "Alimentação",
+        "texto": "A troca é para uma ração hipoalergênica com proteína hidrolisada: Royal Canin Veterinary Diet Hypoallergenic para gatos ou Hill's z/d. Dividir a quantidade do dia em 4 porções pequenas."
+      },
+      {
+        "titulo": "Antes dos exames",
+        "tipo": "nota",
+        "itens": [
+          "Jejum de comida de 12 horas antes da coleta de sangue. Água pode ficar à vontade.",
+          "Tirar a caixa de areia 3 horas antes da coleta de urina."
+        ]
+      },
+      {
+        "titulo": "Me avise se",
+        "tipo": "alerta",
+        "itens": [
+          "[[sinais de alerta definidos pelo Erik para este caso]]"
+        ]
+      },
+      {
+        "titulo": "Retorno",
+        "texto": "[[data ou condição de retorno]]"
+      }
+    ]
+  }
+}

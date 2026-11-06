@@ -1,0 +1,166 @@
+@font-face { font-family: "Roca"; src: url("fonts/RocaTwo-Hv.ttf"); font-weight: 800; }
+@font-face { font-family: "RocaBold"; src: url("fonts/RocaTwo-Bd.ttf"); }
+@font-face { font-family: "Bryndan"; src: url("fonts/BryndanWrite.ttf"); }
+@font-face { font-family: "DM"; src: url("fonts/DMSans.ttf"); font-weight: 100 1000; }
+
+@page {
+  size: A4;
+  margin: 32mm 14mm 21mm 14mm;
+}
+
+* { box-sizing: border-box; }
+html { font-family: "DM"; font-size: 9.4pt; color: #2a2433; line-height: 1.42; }
+body { margin: 0; }
+p { margin: 0 0 4pt; }
+b { font-weight: 650; }
+.rodape { position: running(rodape); font-size: 7pt; color: #a29bab; }
+
+/* cabeçalho branco: logo à esquerda, contatos à direita, título abaixo */
+.cab { position: fixed; top: -28mm; left: 0; width: 182mm; height: 24mm; display: flex; align-items: center; }
+.cab .logo { height: 12.5mm; }
+.cab .contato { margin-left: auto; text-align: right; font-size: 8pt; line-height: 1.6; color: #2a2433; }
+.cab .contato svg { width: 8.5pt; height: 8.5pt; vertical-align: -1.2pt; margin-left: 4pt; }
+.cab .contato .reg { color: #c77d2c; font-weight: 650; }
+.cab-linha { position: fixed; top: -3mm; left: 0; width: 182mm; border-bottom: 1.4pt solid #ece4f6; }
+.titulo { display: flex; align-items: flex-end; justify-content: space-between; margin: 0 0 8pt; }
+.titulo h1 { font-family: "Roca"; font-weight: 800; font-size: 17pt; letter-spacing: -0.6pt; line-height: 1; color: #6728BF; margin: 0; white-space: nowrap; }
+/* cabeçalho do atestado, na diagramação do modelo do Erik */
+.cab.at .logo { height: 20mm; }
+.cab.at .div { width: 1pt; height: 15mm; background: #d9cfe6; margin: 0 12pt; }
+.cab.at .contato { margin-left: 0; text-align: left; }
+.cab.at .contato svg { margin: 0 4pt 0 0; }
+.cab.at .doc { margin-left: auto; text-align: center; color: #5d5666; }
+.cab.at .doc svg { width: 22pt; height: 22pt; }
+.cab.at .doc .t { font-family: "RocaBold"; font-weight: normal; font-size: 13.5pt; letter-spacing: -0.3pt; line-height: 1.15; color: #5d5666; white-space: nowrap; }
+/* onda roxa no pé da página */
+.pe { position: fixed; bottom: -21mm; left: -14mm; width: 210mm; height: 17mm; }
+.pe svg { width: 210mm; height: 17mm; display: block; }
+.pe .cod { position: absolute; right: 14mm; bottom: 4.5mm; color: white; font-size: 7pt; opacity: 0.85; }
+/* título */
+
+.titulo .mao { font-family: "Bryndan"; color: #09b1a2; font-size: 12pt; margin-bottom: 2pt; }
+.vias span { display: inline-block; border: 1pt solid #cfc7d6; border-radius: 20pt; padding: 3pt 9pt; font-size: 8pt; margin-left: 4pt; }
+
+/* blocos de identificação, como no VetSmart */
+.caixa { border: 1pt solid #cfc7d6; border-radius: 8pt; padding: 7pt 11pt; font-size: 7.8pt; line-height: 1.45; margin-bottom: 6pt; color: #4a4452; }
+.caixa b { color: #1d1824; }
+.duas { display: flex; gap: 12pt; margin-bottom: 10pt; }
+.duas .caixa { flex: 1; text-align: center; font-size: 8.6pt; margin: 0; padding: 8pt 10pt; }
+.duas .caixa .ct { font-family: "Roca"; font-weight: 800; letter-spacing: -0.3pt; color: #6728BF; font-size: 11pt; margin-bottom: 3pt; }
+
+/* via de administração, ocupando a largura toda */
+.via { background: #efe7fa; color: #6728BF; font-weight: 800; text-align: center; font-size: 9pt; border-radius: 30pt; padding: 5pt 0; margin: 10pt 0 6pt; }
+
+/* seção de farmácia */
+.farm { display: flex; align-items: center; gap: 6pt; font-size: 9pt; color: #4a4452; margin: 6pt 0 7pt; }
+.farm svg { width: 13pt; height: 13pt; }
+.farm b { color: #1d1824; }
+
+/* medicamento */
+.med { border: 1pt solid #e4dde8; border-radius: 14pt; padding: 6pt 11pt; margin-bottom: 6pt; display: flex; gap: 10pt; break-inside: avoid; }
+.med .corpo { flex: 1; }
+.med .topo { display: flex; justify-content: space-between; gap: 8pt; }
+.med .nomed { font-weight: 700; font-size: 10.2pt; }
+.med .apres { color: #6f6878; font-size: 8.2pt; }
+.med .qtd { font-size: 8.2pt; color: #6f6878; white-space: nowrap; text-align: right; }
+.med .qtd b { display: block; color: #1d1824; font-size: 9.4pt; }
+.med .pos { margin-top: 3pt; font-size: 10.2pt; }
+.med .pos b { font-weight: 700; }
+.chips { margin-top: 5pt; }
+.chip { display: inline-block; font-size: 7.6pt; border-radius: 20pt; padding: 1.5pt 7pt; margin: 0 3pt 2pt 0; background: #efe7fa; color: #4a1c8c; }
+.chip.alerta { background: #fde7e5; color: #b8362d; }
+.med .foto { flex: 0 0 62pt; }
+.med .foto img { width: 62pt; height: 62pt; object-fit: contain; border-radius: 6pt; }
+
+/* seções de texto */
+h2 { font-family: "Roca"; font-weight: 800; letter-spacing: -0.3pt; font-size: 11pt; color: #6728BF; margin: 11pt 0 5pt; white-space: nowrap; display: flex; align-items: center; gap: 8pt; }
+h2::after { content: ""; flex: 1; border-bottom: 1pt solid #ddd5e4; }
+ul.limpa { margin: 0; padding-left: 13pt; }
+ul.limpa li { margin-bottom: 3pt; }
+.nota { background: #fff6ea; border-left: 3pt solid #F9AD59; border-radius: 4pt; padding: 7pt 10pt; }
+.alerta-box { background: #fdeceb; border-left: 3pt solid #e85349; border-radius: 4pt; padding: 7pt 10pt; }
+.pendente { background: #fff3c4; color: #7a5b00; padding: 0 3pt; border-radius: 2pt; }
+
+/* exames */
+.lead { font-size: 9.4pt; color: #4a4452; margin: 4pt 0 6pt; }
+.exame { border-bottom: 1pt solid #ece6ef; padding: 5pt 0; break-inside: avoid; display: flex; gap: 10pt; }
+.exame .nomex { font-weight: 700; font-size: 9.8pt; }
+.exame .mat { color: #6f6878; font-size: 8.2pt; }
+.exame .prep { font-size: 9pt; margin-top: 1pt; color: #4a4452; }
+.exame .ic { flex: 0 0 22pt; height: 22pt; border-radius: 50%; background: #f3ecfc; display: flex; align-items: center; justify-content: center; }
+.exame .ic svg { width: 15pt; height: 15pt; }
+.exame { align-items: center; }
+
+/* tabela de medicamentos nas orientações */
+table.horarios { width: 100%; border-collapse: collapse; font-size: 9pt; }
+table.horarios th { text-align: left; font-weight: 600; font-size: 7.8pt; color: #6f6878; padding: 4pt 6pt; border-bottom: 1pt solid #ddd5e4; }
+table.horarios td { padding: 6pt; border-bottom: 1pt solid #ece6ef; vertical-align: top; }
+
+/* contatos úteis */
+.contatos { display: flex; gap: 8pt; }
+.contatos .c { flex: 1; background: #f1ece6; border-radius: 8pt; padding: 8pt 10pt; font-size: 8.6pt; }
+.contatos .c .t { font-weight: 700; color: #6728BF; margin-bottom: 2pt; }
+.cupom { display: inline-block; font-weight: 700; font-size: 11pt; letter-spacing: 0.5pt; border: 1.2pt dashed #6728BF; border-radius: 5pt; padding: 1pt 7pt; margin-top: 3pt; color: #1d1824; }
+
+.ola { font-family: "Bryndan"; font-size: 15pt; color: #6728BF; margin: 10pt 0 2pt; }
+
+/* data e assinatura, sem linha, como no VetSmart */
+.assin { margin-top: 14pt; font-size: 8.8pt; line-height: 1.5; break-inside: avoid; }
+.assin .data { font-weight: 700; font-size: 8.4pt; color: #4a4452; margin-bottom: 5pt; }
+.assin .quem { font-weight: 700; }
+
+/* atestado sanitário */
+.sec { display: flex; align-items: center; gap: 8pt; background: #6728BF; color: white; border-radius: 20pt; padding: 3.5pt 12pt 3.5pt 5pt; margin: 7pt 0 4pt; break-after: avoid; }
+.sec .n { width: 17pt; height: 17pt; border-radius: 50%; background: #F9AD59; color: #3a1470; font-weight: 800; text-align: center; line-height: 17pt; font-size: 9pt; }
+.sec .t { font-family: "Roca"; font-weight: 800; font-size: 11pt; letter-spacing: -0.3pt; white-space: nowrap; }
+.sec .dir { margin-left: auto; font-size: 7.6pt; opacity: 0.9; }
+.linha { display: flex; gap: 4pt; margin-bottom: 4pt; }
+.cel { flex: 1; background: #f1ece6; border-radius: 9pt; padding: 3.5pt 9pt; font-size: 8.8pt; }
+.cel .r { display: block; color: #8a8292; font-size: 7pt; line-height: 1.2; }
+.cel .v { font-weight: 600; color: #1d1824; }
+.cx { display: inline-block; width: 8pt; height: 8pt; border: 1.1pt solid #6728BF; border-radius: 2pt; margin: 0 2pt 0 6pt; vertical-align: -0.5pt; }
+.cx.on { background: #6728BF; }
+.texto-fixo { background: #f1ece6; border-radius: 9pt; padding: 8pt 11pt; font-size: 8.8pt; line-height: 1.5; }
+.mini { font-size: 7pt; color: #8a8292; margin: -2pt 0 4pt 4pt; }
+.grupo { display: flex; gap: 5pt; }
+.grupo .lado { flex: 0 0 18pt; background: #efe7fa; border-radius: 9pt; color: #6728BF; font-weight: 700; font-size: 7.6pt; display: flex; align-items: center; justify-content: center; }
+.grupo .lado span { transform: rotate(-90deg); white-space: nowrap; display: block; }
+.grupo .campos { flex: 1; }
+.assin-at { display: flex; justify-content: space-between; margin-top: 16pt; font-size: 8.8pt; break-inside: avoid; }
+.assin-at .ac { width: 230pt; }
+.assin-at .ac .esp { height: 24pt; }
+.contatos .c .lg { height: 14pt; float: right; margin-left: 6pt; }
+
+/* produtos de alimentação nas orientações */
+.nutri { display: flex; gap: 8pt; margin-top: 6pt; flex-wrap: wrap; }
+.nutri .np { width: 120pt; border: 1pt solid #e4dde8; border-radius: 12pt; padding: 7pt; text-align: center; break-inside: avoid; }
+.nutri .np img { width: 100%; height: 90pt; object-fit: contain; }
+.nutri .nn { font-weight: 700; font-size: 8.8pt; margin-top: 4pt; }
+.nutri .no { font-size: 8pt; color: #6f6878; }
+
+/* guia alimentar */
+.hero { text-align: center; margin: 4pt 0 10pt; }
+.hero .h { font-family: "Roca"; font-weight: 800; color: #6728BF; font-size: 19pt; letter-spacing: -0.6pt; line-height: 1.05; }
+.hero .para { font-family: "Bryndan"; color: #09b1a2; font-size: 14pt; margin-top: 3pt; }
+.stats { display: flex; gap: 6pt; margin: 6pt 0 4pt; }
+.stats .st { flex: 1; background: #f1ece6; border-radius: 10pt; padding: 6pt; text-align: center; }
+.stats .r { font-size: 7.6pt; color: #8a8292; }
+.stats .v { font-family: "Roca"; font-weight: 800; color: #6728BF; font-size: 16pt; line-height: 1.1; }
+.stats .v small { font-family: "DM"; font-weight: 400; font-size: 8pt; color: #4a4452; }
+.marca { display: flex; align-items: flex-end; justify-content: space-between; margin: 10pt 0 3pt; break-after: avoid; }
+.marca .ml { display: flex; align-items: center; gap: 8pt; font-size: 9pt; color: #4a4452; }
+.marca .lgm { height: 13pt; }
+.marca .fotos { display: flex; gap: 8pt; }
+.marca .fotos div { text-align: center; font-size: 6.8pt; color: #8a8292; }
+.marca .fotos img { height: 30pt; display: block; margin: 0 auto 1pt; }
+table.rac { width: 100%; border-collapse: collapse; font-size: 8.8pt; break-inside: avoid; }
+table.rac th { background: #6728BF; color: white; text-align: left; font-family: "Roca"; font-weight: 800; font-size: 8.4pt; padding: 4pt 7pt; }
+table.rac th:first-child { border-radius: 6pt 0 0 0; } table.rac th:last-child { border-radius: 0 6pt 0 0; }
+table.rac td { padding: 5pt 7pt; border-bottom: 1pt solid #ece6ef; vertical-align: middle; }
+table.rac .dir { text-align: right; }
+table.rac .q { color: #6728BF; font-weight: 700; }
+table.rac .sub { font-size: 7.6pt; color: #8a8292; }
+.tag { display: inline-block; border-radius: 20pt; padding: 1.5pt 8pt; font-size: 7.8pt; font-weight: 700; color: white; white-space: nowrap; }
+.tag.seca { background: #09b1a2; } .tag.mix { background: #F9AD59; } .tag.umida { background: #6728BF; }
+.gap { margin-top: 6pt; font-size: 8.8pt; }
+ul.duas-col { columns: 2; column-gap: 18pt; }
